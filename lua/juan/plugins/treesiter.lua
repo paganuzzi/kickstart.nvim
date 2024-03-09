@@ -1,5 +1,6 @@
 return {
   'nvim-treesitter/nvim-treesitter',
+  event = 'BufRead',
   build = ':TSUpdate',
   config = function()
     -- [[ Configure Treesitter ]] See `:help nvim-treesitter`

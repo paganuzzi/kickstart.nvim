@@ -7,7 +7,7 @@ return {
     },
   },
   keys = {
-    { '<leader>fu', '<cmd>Telescope undo<cr>', desc = 'undo history' },
+    { '<leader>su', '<cmd>Telescope undo<cr>', desc = 'undo history' },
   },
   config = function(_, opts)
     local opts = {

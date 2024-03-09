@@ -2,7 +2,6 @@ return {
   'folke/neodev.nvim',
   dependencies = { 'neovim/nvim-lspconfig' },
   event = 'BufRead',
-  ft = 'lua',
   setup = function()
     -- then setup your lsp server as usual
     local lspconfig = require 'lspconfig'
