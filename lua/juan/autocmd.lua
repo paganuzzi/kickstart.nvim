@@ -5,3 +5,12 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     vim.highlight.on_yank { timeout = 50 }
   end,
 })
+
+-- vim.api.nvim_create_autocmd('BufEnter', {
+--   desc = 'Set blade filetype',
+--   pattern = '*.blade.php',
+--   group = vim.api.nvim_create_augroup('Blade', { clear = true }),
+--   callback = function()
+--     vim.set.filetype = 'blade'
+--   end,
+-- })
