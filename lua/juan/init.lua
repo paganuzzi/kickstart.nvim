@@ -26,4 +26,3 @@ require('lazy').setup('juan.plugins', {
   },
 })
 require 'juan.keymaps'
-require 'juan.treesiter-blade'

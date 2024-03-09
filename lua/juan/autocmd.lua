@@ -6,11 +6,11 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
--- vim.api.nvim_create_autocmd('BufEnter', {
---   desc = 'Set blade filetype',
---   pattern = '*.blade.php',
---   group = vim.api.nvim_create_augroup('Blade', { clear = true }),
---   callback = function()
---     vim.set.filetype = 'blade'
---   end,
--- })
+vim.api.nvim_create_autocmd('BufEnter', {
+  desc = 'Llama a treesiter blade',
+  pattern = '*.blade.php',
+  group = vim.api.nvim_create_augroup('Blade', { clear = true }),
+  callback = function()
+    require 'juan.treesiter-blade'
+  end,
+})
