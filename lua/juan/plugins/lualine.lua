@@ -3,13 +3,12 @@ return {
   'nvim-lualine/lualine.nvim',
   dependencies = {
     'nvim-tree/nvim-web-devicons',
-    'archibate/lualine-time',
   },
   config = true,
   opts = {
     options = {
       globalstatus = true,
-      theme = 'auto',
+      theme = 'rose-pine',
     },
     sections = {
       lualine_a = { 'mode' },
@@ -21,7 +20,6 @@ return {
           cond = require('lazy.status').has_updates,
           color = { fg = '#ff9e64' },
         },
-        'ctime',
       },
       lualine_y = { 'progress' },
       lualine_z = { 'location' },
