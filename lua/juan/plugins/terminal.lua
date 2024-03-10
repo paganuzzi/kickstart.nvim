@@ -12,8 +12,8 @@ return {
       direction = 'float',
       float_opts = {
         border = 'single',
-        width = vim.api.nvim_win_get_width(vim.api.nvim_get_current_win()),
-        height = vim.api.nvim_win_get_height(vim.api.nvim_get_current_win()),
+        width = vim.api.nvim_win_get_width(vim.api.nvim_get_current_win()) - 3,
+        height = vim.api.nvim_win_get_height(vim.api.nvim_get_current_win()) - 3,
         winblend = 3,
       },
       -- function to run on opening the terminal
