@@ -1,3 +1,7 @@
+--Git
+vim.keymap.set('n', '<leader>gs', '<cmd>:Gitsigns<cr>', { desc = 'GitSigns' })
+vim.keymap.set('n', '<leader>gr', '<cmd>:Gitdiffsplit!<cr>', { desc = 'GitDiffSplit' })
+
 --bufers
 vim.keymap.set('n', '<leader>ba', '<cmd>%bd<cr>', { desc = 'Borra todos los bufers' })
 vim.keymap.set('n', '<leader>bd', '<cmd>bd<cr>', { desc = 'Borra el buffer actual' })
