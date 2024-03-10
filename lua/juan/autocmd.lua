@@ -14,3 +14,12 @@ vim.api.nvim_create_autocmd('BufEnter', {
     require 'juan.treesiter-blade'
   end,
 })
+
+-- vim.api.nvim_create_autocmd('BufWritePost', {
+--   desc = 'Corre test de php',
+--   pattern = { '*.test.php', '*Test.php' },
+--   group = vim.api.nvim_create_augroup('Test', { clear = true }),
+--   callback = function()
+--     vim.cmd { cmd = 'TestNearest' }
+--   end,
+-- })

@@ -1,10 +1,11 @@
 return {
-  'folke/tokyonight.nvim',
-  lazy = false,
+  'rose-pine/neovim',
+  event = 'VeryLazy',
   priority = 1000,
+  name = 'rose-pine',
   config = function()
-    -- Load the colorscheme here
-    vim.cmd.colorscheme 'tokyonight-night'
-    vim.cmd.hi 'Comment gui=none'
+    local rosepine = require 'rose-pine'
+    rosepine.setup { disable_background = true }
+    vim.cmd 'colorscheme rose-pine'
   end,
 }

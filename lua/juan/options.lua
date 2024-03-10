@@ -10,7 +10,7 @@ vim.opt.undofile = true
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.signcolumn = 'yes'
-
+vim.opt.shortmess = 'I'
 -- Decrease update time
 vim.opt.updatetime = 250
 vim.opt.timeoutlen = 300
@@ -46,3 +46,4 @@ vim.filetype.add {
     ['.*%.blade%.php'] = 'blade',
   },
 }
+vim.opt.equalalways = true

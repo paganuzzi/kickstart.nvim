@@ -6,6 +6,10 @@ return {
   cmd = 'Oil',
   opts = {
     default_file_explorer = true,
+    buf_options = {
+      buflisted = true,
+      bufhidden = 'hide',
+    },
     keymaps = {
       ['g?'] = 'actions.show_help',
       ['<CR>'] = 'actions.select',

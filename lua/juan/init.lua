@@ -1,3 +1,5 @@
+--TODO:lazygit en una terminal,
+
 require 'juan.options'
 require 'juan.autocmd'
 
