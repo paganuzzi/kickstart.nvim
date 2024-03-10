@@ -7,8 +7,8 @@ return {
   },
   config = true,
   opts = {
-
     options = {
+      globalstatus = true,
       theme = 'auto',
     },
     sections = {

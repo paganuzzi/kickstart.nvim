@@ -9,7 +9,7 @@ return {
     'tpope/vim-dispatch',
   },
   config = function()
-    vim.g['test#strategy'] = 'dispatch_background'
+    vim.g['test#strategy'] = 'dispatch'
     -- if vim.fn.filereadable './artisan' == 1 then
     --   vim.g['dispatch_compilers["php artisan"]'] = 'test'
     -- end
@@ -17,6 +17,7 @@ return {
     vim.g['test#enabled_runners'] = { 'php#phpunit' }
   end,
   keys = {
+    { '<leader>to', ':Copen<CR>', desc = 'Test Open Result' },
     { '<leader>tr', ':TestNearest<CR>', desc = 'Test TestNearest' },
     { '<leader>tf', ':TestFile<CR>', desc = 'Test TestFile' },
     { '<leader>ta', ':TestSuite<CR>', desc = 'Test TestSuite' },
