@@ -3,12 +3,13 @@ return {
   'nvim-lualine/lualine.nvim',
   dependencies = {
     'nvim-tree/nvim-web-devicons',
+    'rose-pine/neovim',
   },
   config = true,
   opts = {
     options = {
       globalstatus = true,
-      theme = 'rose-pine',
+      theme = 'auto',
     },
     sections = {
       lualine_a = { 'mode' },

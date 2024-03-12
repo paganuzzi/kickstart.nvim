@@ -1,6 +1,6 @@
 --Git
 vim.keymap.set('n', '<leader>gs', '<cmd>:Gitsigns<cr>', { desc = 'GitSigns' })
-vim.keymap.set('n', '<leader>gr', '<cmd>:Gitdiffsplit!<cr>', { desc = 'GitDiffSplit' })
+vim.keymap.set('n', '<leader>gr', '<cmd>:Gvdiffsplit!<cr>', { desc = 'GitDiffSplit' })
 
 --bufers
 vim.keymap.set('n', '<leader>ba', '<cmd>%bd<cr>', { desc = 'Borra todos los bufers' })
@@ -16,7 +16,7 @@ vim.keymap.set({ 'n', 't' }, '<C-up>', '<C-w><C-k>', { desc = 'Move focus to the
 --Toggleterm
 vim.keymap.set({ 'n', 't' }, '<tab><tab>', '<cmd>ToggleTerm<cr>', { desc = 'Toggleterm terminal' })
 --Telescope
-vim.keymap.set('n', '<C-p>', '<cmd>Telescope git_files<CR>', { desc = '[S]earch [G]it Files' })
+vim.keymap.set('n', '<C-p>', '<cmd>Telescope find_files<CR>', { desc = '[S]earch [G]it Files' })
 vim.keymap.set('n', '<leader>,', '<cmd>Telescope buffers<CR>', { desc = '[S]earch [G]Buffers' })
 
 --OIL
@@ -28,7 +28,7 @@ vim.keymap.set('n', '<leader>l', '<cmd>Lazy<CR>', { desc = 'LazyVim' })
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
 --Save keymaps
-vim.keymap.set({ 'n', 'i' }, '<C-s>', '<Esc>:w<CR>')
+vim.keymap.set({ 'n', 'i', 'v' }, '<C-s>', '<Esc>:silent :w <CR>', { silent = true })
 
 -- Diagnostic keymaps
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous [D]iagnostic message' })
@@ -37,4 +37,4 @@ vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Show diagn
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 
 --Todo
-vim.keymap.set('n', '<leader>st', '<cmd>TodoTelescope<cr>', { desc = 'Todo List' })
+vim.keymap.set('n', '<leader><leader>t', '<cmd>TodoTelescope<cr>', { desc = 'Todo List' })
