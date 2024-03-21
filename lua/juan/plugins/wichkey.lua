@@ -13,7 +13,7 @@ return { -- Useful plugin to show you pending keybinds.
       ['<leader>g'] = { name = 'Git', _ = 'which_key_ignore' },
       ['<leader>h'] = { name = 'Harpoon', _ = 'which_key_ignore' },
       ['<leader>l'] = { name = 'Lazy', _ = 'which_key_ignore' },
-      ['<leader>r'] = { name = 'Rename/Rest', _ = 'which_key_ignore' },
+      ['<leader>r'] = { name = 'Api Rest', _ = 'which_key_ignore' },
       ['<leader><leader>'] = { name = 'Search', _ = 'which_key_ignore' },
       ['<leader>t'] = { name = 'Test', _ = 'which_key_ignore' },
       ['<leader>w'] = { name = 'Workspace', _ = 'which_key_ignore' },

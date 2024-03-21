@@ -47,4 +47,10 @@ vim.filetype.add {
     ['.*%.blade%.php'] = 'blade',
   },
 }
+--add http filetype
+vim.filetype.add {
+  pattern = {
+    ['.*%.http'] = 'http',
+  },
+}
 vim.opt.equalalways = true
