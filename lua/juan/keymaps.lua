@@ -16,7 +16,7 @@ vim.keymap.set({ 'n', 't' }, '<C-up>', '<C-w><C-k>', { desc = 'Move focus to the
 --Toggleterm
 vim.keymap.set({ 'n', 't' }, '<tab><tab>', '<cmd>ToggleTerm<cr>', { desc = 'Toggleterm terminal' })
 --Telescope
-vim.keymap.set('n', '<C-p>', '<cmd>Telescope find_files<CR>', { desc = '[S]earch [G]it Files' })
+vim.keymap.set('n', '<C-p>', '<cmd>Telescope git_files<CR>', { desc = '[S]earch [G]it Files' })
 vim.keymap.set('n', '<leader>,', '<cmd>Telescope buffers<CR>', { desc = '[S]earch [G]Buffers' })
 
 --OIL
