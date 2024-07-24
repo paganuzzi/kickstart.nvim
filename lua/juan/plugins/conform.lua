@@ -21,6 +21,7 @@ return {
         lua = { 'stylua' },
         php = { 'pint' },
         yaml = { 'yamlfmt' },
+        go = { 'gofmt' },
       },
     }
   end,

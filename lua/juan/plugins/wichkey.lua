@@ -2,21 +2,26 @@ return { -- Useful plugin to show you pending keybinds.
   'folke/which-key.nvim',
   event = 'VeryLazy', -- Sets the loading event to 'VimEnter'
   config = function() -- This is the function that runs, AFTER loading
-    require('which-key').setup()
+    local wk = require 'which-key'
 
-    -- Document existing key chains
-    require('which-key').register {
-      ['<leader>b'] = { name = 'Buffers', _ = 'which_key_ignore' },
-      ['<leader>c'] = { name = 'Code', _ = 'which_key_ignore' },
-      ['<leader>d'] = { name = 'Document', _ = 'which_key_ignore' },
-      ['<leader>f'] = { name = 'Laravel', _ = 'which_key_ignore' },
-      ['<leader>g'] = { name = 'Git', _ = 'which_key_ignore' },
-      ['<leader>h'] = { name = 'Harpoon', _ = 'which_key_ignore' },
-      ['<leader>l'] = { name = 'Lazy', _ = 'which_key_ignore' },
-      ['<leader>r'] = { name = 'Api Rest', _ = 'which_key_ignore' },
-      ['<leader><leader>'] = { name = 'Search', _ = 'which_key_ignore' },
-      ['<leader>t'] = { name = 'Test', _ = 'which_key_ignore' },
-      ['<leader>w'] = { name = 'Workspace', _ = 'which_key_ignore' },
+    wk.add {
+      { '<leader>b', desc = 'Buffers' },
+      { '<leader>c', desc = 'Code' },
+      { '<leader>d', desc = 'Document' },
+      { '<leader>f', desc = 'Laravel' },
+      { '<leader>g', desc = 'Git' },
+      { '<leader>h', desc = 'Harpoon' },
+      { '<leader>l', desc = 'Lazy' },
+      { '<leader>r', desc = 'Api Rest' },
+      { '<leader><leader>', desc = 'Search' },
+      { '<leader>t', desc = 'Test' },
+      { '<leader>w', desc = 'Workspace' },
+    }
+
+    wk.setup {
+      icons = {
+        mappings = false,
+      },
     }
   end,
 }
