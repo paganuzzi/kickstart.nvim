@@ -65,7 +65,7 @@ return { -- Fuzzy Finder (files, lsp, etc)
     vim.keymap.set('n', '<leader><leader>w', builtin.grep_string, { desc = 'Search current Word' })
     vim.keymap.set('n', '<leader><leader>l', builtin.live_grep, { desc = 'Search by Lrep' })
     vim.keymap.set('n', '<leader><leader>d', builtin.diagnostics, { desc = 'Search Diagnostics' })
-    vim.keymap.set('n', '<leader><leader>r', builtin.resume, { desc = 'Search Resume' })
+    vim.keymap.set('n', '<leader><leader>r', builtin.registers, { desc = 'Search Registers' })
     vim.keymap.set('n', '<leader><leader>T', builtin.help_tags, { desc = 'Help Tags' })
     vim.keymap.set('n', '<leader><leader>.', builtin.oldfiles, { desc = 'Search Recent Files ("." for repeat)' })
 
