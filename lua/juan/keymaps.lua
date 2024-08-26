@@ -1,3 +1,8 @@
+--Musiquita
+vim.keymap.set('n', '<leader>mp', '<cmd>:silent !playerctl --all-players play-pause<cr>', { desc = 'Pausa', silent = true })
+vim.keymap.set('n', '<leader>ms', '<cmd>:silent !playerctl --all-players next<cr>', { desc = 'Siguiente', silent = true })
+vim.keymap.set('n', '<leader>ma', '<cmd>:silent !playerctl --all-players previous<cr>', { desc = 'Anterior', silent = true })
+
 --Git
 vim.keymap.set('n', '<leader>gs', '<cmd>:Gitsigns<cr>', { desc = 'GitSigns' })
 vim.keymap.set('n', '<leader>gr', '<cmd>:Gvdiffsplit!<cr>', { desc = 'GitDiffSplit' })
