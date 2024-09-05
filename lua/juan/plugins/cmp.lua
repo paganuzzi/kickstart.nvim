@@ -25,17 +25,17 @@ return { -- Autocompletion
     local cmp = require 'cmp'
     local luasnip = require 'luasnip'
 
-    vim.api.nvim_set_hl(0, 'MiCmpColor', { bg = 'Black', fg = 'White' })
+    -- vim.api.nvim_set_hl(0, 'MiCmpColor', { bg = 'Black', fg = 'White' })
 
     require('luasnip.loaders.from_vscode').lazy_load()
     luasnip.config.setup {}
 
     cmp.setup {
-      window = {
-        completion = {
-          winhighlight = 'Normal:MiCmpColor,FloatBorder:MiCmpColor,CursorLine:MiCmpColor,Search:None',
-        },
-      },
+      -- window = {
+      --   completion = {
+      --     winhighlight = 'Normal:MiCmpColor,FloatBorder:MiCmpColor,CursorLine:MiCmpColor,Search:None',
+      --   },
+      -- },
       snippet = {
         expand = function(args)
           luasnip.lsp_expand(args.body)
