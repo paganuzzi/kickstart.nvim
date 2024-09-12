@@ -10,6 +10,7 @@ vim.keymap.set('n', '<leader>gr', '<cmd>:Gvdiffsplit!<cr>', { desc = 'GitDiffSpl
 --Bufers
 vim.keymap.set('n', '<leader>ba', '<cmd>%bd<cr>', { desc = 'Borra todos los bufers' })
 vim.keymap.set('n', '<leader>bd', '<cmd>bd<cr>', { desc = 'Borra el buffer actual' })
+vim.keymap.set('n', '<leader>bp', '<cmd>bp<cr>', { desc = 'Buffer previo' })
 
 vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
 
@@ -18,8 +19,6 @@ vim.keymap.set({ 'n', 't' }, '<C-right>', '<C-w><C-l>', { desc = 'Move focus to 
 vim.keymap.set({ 'n', 't' }, '<C-down>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set({ 'n', 't' }, '<C-up>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
---Toggleterm
-vim.keymap.set({ 'n' }, '<tab><tab>', '<cmd>ToggleTerm<cr>', { desc = 'Toggleterm terminal' })
 --Telescope
 vim.keymap.set('n', '<C-p>', '<cmd>Telescope git_files<CR>', { desc = '[S]earch [G]it Files' })
 vim.keymap.set('n', '<leader>,', '<cmd>Telescope buffers<CR>', { desc = '[S]earch [G]Buffers' })

@@ -1,27 +1,25 @@
 return {
   'vim-test/vim-test',
-  -- enabled = false,
   cmd = {
     'TestNearest',
   },
   dependencies = {
-    'akinsho/toggleterm.nvim',
-    'tpope/vim-dispatch',
+    'reinh/vim-makegreen',
   },
   config = function()
-    vim.g['test#strategy'] = 'dispatch'
-    -- if vim.fn.filereadable './artisan' == 1 then
+    vim.g['test#strategy'] = 'neovim_sticky'
+    vim.g['test#neovim#term_position'] = 'vert'
+    vim.g['test#neovim_sticky#kill_previous'] = 1
+    vim.g['test#neovim_sticky#reopen_window'] = 1
     --   vim.g['dispatch_compilers["php artisan"]'] = 'test'
     -- end
-    --
-    vim.g['test#enabled_runners'] = { 'php#phpunit' }
+    -- vim.g['test#php#runner'] = 'phpunit'
   end,
   keys = {
-    { '<leader>to', ':Copen<CR>', desc = 'Test Open Result' },
-    { '<leader>tr', ':TestNearest<CR>', desc = 'Test TestNearest' },
-    { '<leader>tf', ':TestFile<CR>', desc = 'Test TestFile' },
-    { '<leader>ta', ':TestSuite<CR>', desc = 'Test TestSuite' },
-    { '<leader>tl', ':TestLast<CR>', desc = 'Test TestLast' },
-    { '<leader>tv', ':TestVisit<CR>', desc = 'Test TestVisit' },
+    { '<leader>tr', '<cmd>TestNearest<cr>', desc = 'Test TestNearest' },
+    { '<leader>tf', '<cmd>TestFile<cr>', desc = 'Test TestFile' },
+    { '<leader>ta', '<cmd>TestSuite<cr>', desc = 'Test TestSuite' },
+    { '<leader>tl', '<cmd>TestLast<cr>', desc = 'Test TestLast' },
+    { '<leader>tv', '<cmd>TestVisit<cr>', desc = 'Test TestVisit' },
   },
 }

@@ -3,6 +3,7 @@ return {
   'nvim-lualine/lualine.nvim',
   dependencies = {
     'nvim-tree/nvim-web-devicons',
+    'archibate/lualine-time',
   },
   config = true,
   opts = {
@@ -22,7 +23,7 @@ return {
         },
       },
       lualine_y = { 'progress' },
-      lualine_z = { 'location' },
+      lualine_z = { 'location', 'ctime' },
     },
     inactive_sections = {
       lualine_a = {},
