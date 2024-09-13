@@ -18,3 +18,17 @@ vim.api.nvim_create_user_command('HarpoonNext', function()
   local harpoon = require 'harpoon'
   harpoon:list():next()
 end, {})
+
+--Musiquita
+
+vim.api.nvim_create_user_command('Musica', function(arg)
+  if arg.args == 'play' then
+    vim.system { 'playerctl', 'play-pause' }
+  end
+  if arg.args == 'next' then
+    vim.system { 'playerctl', 'next' }
+  end
+  if arg.args == 'prev' then
+    vim.system { 'playerctl', 'previous' }
+  end
+end, { nargs = 1 })

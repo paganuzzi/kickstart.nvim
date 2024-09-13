@@ -1,7 +1,7 @@
 --Musiquita
-vim.keymap.set('n', '<leader>mp', '<cmd>:silent !playerctl --all-players play-pause<cr>', { desc = 'Pausa', silent = true })
-vim.keymap.set('n', '<leader>ms', '<cmd>:silent !playerctl --all-players next<cr>', { desc = 'Siguiente', silent = true })
-vim.keymap.set('n', '<leader>ma', '<cmd>:silent !playerctl --all-players previous<cr>', { desc = 'Anterior', silent = true })
+vim.keymap.set('n', '<leader>mp', '<cmd>Musica play<cr>', { desc = 'Pausa', silent = true })
+vim.keymap.set('n', '<leader>ms', '<cmd>Musica next<cr>', { desc = 'Siguiente', silent = true })
+vim.keymap.set('n', '<leader>ma', '<cmd>Musica prev<cr>', { desc = 'Anterior', silent = true })
 
 --Git
 vim.keymap.set('n', '<leader>gs', '<cmd>:Gitsigns<cr>', { desc = 'GitSigns' })
@@ -11,6 +11,7 @@ vim.keymap.set('n', '<leader>gr', '<cmd>:Gvdiffsplit!<cr>', { desc = 'GitDiffSpl
 vim.keymap.set('n', '<leader>ba', '<cmd>%bd<cr>', { desc = 'Borra todos los bufers' })
 vim.keymap.set('n', '<leader>bd', '<cmd>bd<cr>', { desc = 'Borra el buffer actual' })
 vim.keymap.set('n', '<leader>bp', '<cmd>bp<cr>', { desc = 'Buffer previo' })
+vim.keymap.set('n', '<leader>bo', '<cmd>silent %bd|e#|bd#<cr>', { desc = 'Buffer Otros', silent = true })
 
 vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
 
