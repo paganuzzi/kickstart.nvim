@@ -3,6 +3,10 @@ vim.keymap.set('n', '<leader>mp', '<cmd>Musica play<cr>', { desc = 'Pausa', sile
 vim.keymap.set('n', '<leader>ms', '<cmd>Musica next<cr>', { desc = 'Siguiente', silent = true })
 vim.keymap.set('n', '<leader>ma', '<cmd>Musica prev<cr>', { desc = 'Anterior', silent = true })
 
+--Terminal
+vim.keymap.set('n', '<tab><tab>', ':split | startinsert | resize 10 | term<cr>', { desc = 'Terminal', silent = true })
+vim.keymap.set('n', '<leader>gl', ':startinsert | terminal lazygit<cr>', { desc = 'Lazygit', silent = true })
+
 --Git
 vim.keymap.set('n', '<leader>gs', '<cmd>:Gitsigns<cr>', { desc = 'GitSigns' })
 vim.keymap.set('n', '<leader>gr', '<cmd>:Gvdiffsplit!<cr>', { desc = 'GitDiffSplit' })
