@@ -3,11 +3,8 @@ return {
   cmd = {
     'TestNearest',
   },
-  dependencies = {
-    'reinh/vim-makegreen',
-  },
   config = function()
-    vim.g['test#strategy'] = 'neovim'
+    vim.g['test#strategy'] = 'neovim_sticky'
     vim.g['test#neovim#term_position'] = 'vert'
     vim.g['test#neovim_sticky#kill_previous'] = 1
     vim.g['test#neovim_sticky#reopen_window'] = 1

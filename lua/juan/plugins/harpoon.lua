@@ -4,7 +4,7 @@ return {
   dependencies = { 'nvim-lua/plenary.nvim', 'nvim-telescope/telescope.nvim' },
   keys = {
     { '<C-a>', '<cmd>HarpoonAdd<cr>', desc = 'Harpoon add' },
-    { '<leader>hh', '<cmd>HarpoonMenu<cr>', desc = 'Harpoon Menu' },
+    { '<leader>h', '<cmd>HarpoonMenu<cr>', desc = 'Harpoon Menu' },
     { '<A-left>', '<cmd>HarpoonPrev<cr>', desc = 'Harpoon Prev' },
     { '<A-right>', '<cmd>HarpoonNext<cr>', desc = 'Harpoon Next' },
   },
