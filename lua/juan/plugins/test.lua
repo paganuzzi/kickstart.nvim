@@ -10,7 +10,7 @@ return {
     vim.g['test#enabled_runners'] = { 'php#phpunit' }
     vim.g['test#php#phpunit#executable'] = 'php artisan test'
     vim.g['test#strategy'] = 'neovim_sticky'
-    vim.g['test#neovim#term_position'] = 'vert'
+    vim.g['test#neovim#term_position'] = 'vert 60'
     vim.g['test#neovim#kill_previous'] = 1
     vim.g['test#neovim#reopen_window'] = 1
   end,
