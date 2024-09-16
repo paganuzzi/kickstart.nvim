@@ -7,14 +7,12 @@ return {
     'tpope/vim-dispatch',
   },
   config = function()
-    vim.g['test#strategy'] = 'dispatch_background'
-    -- vim.g['test#neovim#term_position'] = 'vert'
-    -- vim.g['test#neovim_sticky#kill_previous'] = 1
-    -- vim.g['test#neovim_sticky#reopen_window'] = 1
-    -- vim.g['test#preserve_screen'] = 0
-    --   vim.g['dispatch_compilers["php artisan"]'] = 'test'
-    -- end
-    -- vim.g['test#php#runner'] = 'phpunit'
+    vim.g['test#enabled_runners'] = { 'php#phpunit' }
+    vim.g['test#php#phpunit#executable'] = 'php artisan test'
+    vim.g['test#strategy'] = 'neovim_sticky'
+    vim.g['test#neovim#term_position'] = 'vert'
+    vim.g['test#neovim#kill_previous'] = 1
+    vim.g['test#neovim#reopen_window'] = 1
   end,
   keys = {
     { '<leader>tr', '<cmd>TestNearest<cr>', desc = 'Test TestNearest' },
