@@ -19,6 +19,11 @@ vim.api.nvim_create_user_command('HarpoonNext', function()
   harpoon:list():next()
 end, {})
 
+vim.api.nvim_create_user_command('HarpoonPin', function()
+  local harpoon = require 'harpoon'
+  harpoon:list():select(1)
+end, {})
+
 --Musiquita
 
 vim.api.nvim_create_user_command('Musica', function(arg)

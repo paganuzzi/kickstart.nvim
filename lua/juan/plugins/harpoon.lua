@@ -7,6 +7,7 @@ return {
     { '<leader>h', '<cmd>HarpoonMenu<cr>', desc = 'Harpoon Menu' },
     { '<A-left>', '<cmd>HarpoonPrev<cr>', desc = 'Harpoon Prev' },
     { '<A-right>', '<cmd>HarpoonNext<cr>', desc = 'Harpoon Next' },
+    { '<A-up>', '<cmd>HarpoonPin<cr>', desc = 'Harpoon Next' },
   },
   config = true,
   opts = {
