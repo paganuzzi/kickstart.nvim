@@ -15,7 +15,6 @@ return { -- Useful plugin to show you pending keybinds.
       { '<leader>m', desc = 'Musiquita' },
       { '<leader>r', desc = 'Api Rest' },
       { '<leader><leader>', desc = 'Search' },
-      { '<leader>t', desc = 'Test' },
       { '<leader>w', desc = 'Workspace' },
     }
 

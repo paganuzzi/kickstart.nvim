@@ -53,4 +53,4 @@ vim.filetype.add {
     ['.*%.http'] = 'http',
   },
 }
-vim.opt.equalalways = true
+vim.opt.equalalways = false
