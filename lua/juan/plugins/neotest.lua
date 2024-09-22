@@ -85,9 +85,19 @@ return {
       end,
       desc = 'Toggle Watch',
     },
-    -- { '<leader>tr', ':lua require("neotest").run.run()<cr>', desc = 'Test Run', silent = true },
-    -- { '<leader>tl', ':lua require("neotest").run.run_last()<cr>', desc = 'Test Run Last', silent = true },
-    -- { '<leader>to', ':lua require("neotest").output_panel.toggle()<cr>', desc = 'Test Output Toggle', silent = true },
-    -- { '<leader>ts', ':lua require("neotest").summary.toggle()<cr>', desc = 'Test Summary Toggle', silent = true },
+    {
+      '<leader>tp',
+      function()
+        require('neotest').jump.prev { status = 'failed' }
+      end,
+      desc = 'Prev Test Error',
+    },
+    {
+      '<leader>tn',
+      function()
+        require('neotest').jump.next { status = 'failed' }
+      end,
+      desc = 'Next Test Error',
+    },
   },
 }
