@@ -5,9 +5,10 @@ return {
     local util = require 'conform.util'
     local conform = require 'conform'
     conform.setup {
-      notify_on_error = true,
+      notify_no_formatters = false,
+      notify_on_error = false,
       format_on_save = {
-        timeout_ms = 500,
+        timeout_ms = 700,
         lsp_fallback = true,
       },
       formatters = {

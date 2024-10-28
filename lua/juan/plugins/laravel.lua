@@ -15,6 +15,9 @@ return {
   },
   opts = {
     features = {
+      model_info = {
+        enable = false,
+      },
       null_ls = {
         enable = false,
       },

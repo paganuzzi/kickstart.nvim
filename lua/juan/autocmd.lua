@@ -18,7 +18,7 @@ vim.api.nvim_create_autocmd('BufEnter', {
 vim.api.nvim_create_autocmd('BufWritePre', {
   pattern = '*',
   callback = function(args)
-    require('conform').format { bufnr = args.buf }
+    require('conform').format { bufnr = args.buf, quiet = true, async = false, timeout_ms = 1000 }
   end,
 })
 
