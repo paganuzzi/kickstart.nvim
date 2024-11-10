@@ -11,6 +11,11 @@ return { -- LSP Configuration & Plugins
     { 'j-hui/fidget.nvim', opts = {} },
   },
   config = function()
+    vim.diagnostic.config {
+      virtual_text = false,
+      signs = true,
+      underline = true,
+    }
     vim.api.nvim_create_autocmd('LspAttach', {
       group = vim.api.nvim_create_augroup('kickstart-lsp-attach', { clear = true }),
       callback = function(event)
