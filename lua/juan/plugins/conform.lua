@@ -7,10 +7,7 @@ return {
     conform.setup {
       notify_no_formatters = false,
       notify_on_error = false,
-      format_on_save = {
-        timeout_ms = 700,
-        lsp_fallback = true,
-      },
+      format_on_save = false,
       formatters = {
         command = util.find_executable({
           'vendor/bin/pint',
