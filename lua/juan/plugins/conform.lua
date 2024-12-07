@@ -20,6 +20,7 @@ return {
         php = { 'pint' },
         yaml = { 'yamlfmt' },
         go = { 'gofmt' },
+        html = { 'prettierd' },
       },
     }
   end,
