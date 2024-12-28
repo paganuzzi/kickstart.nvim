@@ -4,7 +4,7 @@ return {
   -- cmd = { 'HttpRun', 'HttpReplay', 'HttpInspect', 'HttpScratchpad', 'HttpPrevious', 'HttpNext', 'HttpSearch' },
   opts = {
     default_view = 'headers_body',
-    split_direction = 'vertical',
+    split_direction = 'horizontal',
   },
   keys = {
     { '<leader>rr', '<cmd>lua require("kulala").run()<cr>', desc = 'Http Run' },

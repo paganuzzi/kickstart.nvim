@@ -14,7 +14,7 @@ return {
         require 'neotest-phpunit',
       },
       status = { virtual_text = true },
-      output = { open_on_run = false },
+      output = { open_on_run = true },
     }
     require 'neotest-phpunit' {
       filter_dirs = { 'vendor' },

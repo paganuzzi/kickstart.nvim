@@ -30,3 +30,12 @@ vim.api.nvim_create_autocmd('BufWritePost', {
     vim.cmd 'Neotest run'
   end,
 })
+
+vim.api.nvim_create_autocmd('BufWritePost', {
+  desc = 'Corre una request http ',
+  pattern = { '*.http' },
+  group = vim.api.nvim_create_augroup('HTTPRequest', { clear = true }),
+  callback = function()
+    vim.cmd 'lua require("kulala").run()'
+  end,
+})
