@@ -4,23 +4,28 @@ return {
   config = function()
     local util = require 'conform.util'
     local conform = require 'conform'
+
     conform.setup {
-      notify_no_formatters = false,
-      notify_on_error = false,
-      format_on_save = false,
-      formatters = {
-        command = util.find_executable({
-          'vendor/bin/pint',
-        }, 'pint'),
-        args = { '$FILENAME' },
-        stdin = false,
+      format_on_save = {
+        timeout_ms = 500,
+      },
+      notify_on_error = true,
+      notify_no_formatters = true,
+      default_format_opts = {
+        lsp_format = 'fallback',
       },
       formatters_by_ft = {
         lua = { 'stylua' },
-        php = { 'pint' },
-        yaml = { 'yamlfmt' },
-        go = { 'gofmt' },
-        html = { 'prettierd' },
+        php = { 'pint', lsp_format = 'fallback' },
+        blade = { 'prettier' },
+        ['_'] = { 'prettier' },
+      },
+    }
+    conform.formatters.prettier = {
+      options = {
+        ft_parsers = {
+          blade = 'html',
+        },
       },
     }
   end,
