@@ -15,12 +15,13 @@ vim.api.nvim_create_autocmd('BufEnter', {
   end,
 })
 
-vim.api.nvim_create_autocmd('BufWritePre', {
-  pattern = '*',
-  callback = function(args)
-    require('conform').format { bufnr = args.buf, quiet = true, async = false, timeout_ms = 1000 }
-  end,
-})
+-- vim.api.nvim_create_autocmd('BufWritePre', {
+--   pattern = '*',
+--   callback = function(args)
+--     require('conform').format { bufnr = args.buf }
+--     print 'hola'
+--   end,
+-- })
 
 vim.api.nvim_create_autocmd('BufWritePost', {
   desc = 'Corre test de php',
