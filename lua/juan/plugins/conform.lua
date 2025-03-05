@@ -15,6 +15,7 @@ return {
       },
       formatters_by_ft = {
         lua = { 'stylua' },
+        python = { 'black' },
         php = { 'pint' },
         -- lsp_format = 'fallback' },
         blade = { 'prettier' },

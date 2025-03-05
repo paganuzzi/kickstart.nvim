@@ -11,4 +11,7 @@ return {
       changedelete = { text = '~' },
     },
   },
+  keys = {
+    { '<leader>gb', ':Gitsigns blame<cr>', desc = 'Git Blame' },
+  },
 }
