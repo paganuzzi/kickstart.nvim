@@ -1,6 +1,6 @@
 return {
   'chrisgrieser/nvim-origami',
-  event = 'BufRead',
+  { 'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async' },
   keys = {
     {
       '<Left>',
