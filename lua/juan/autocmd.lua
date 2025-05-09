@@ -1,12 +1,16 @@
 vim.api.nvim_create_autocmd('LspAttach', {
 	group = vim.api.nvim_create_augroup('kickstart-lsp-attach', { clear = true }),
 	callback = function(event)
-		local capabilities = vim.lsp.protocol.make_client_capabilities()
-		vim.lsp.config('*', {
-			root_markers = { '.git' },
-			capabilities = vim.tbl_deep_extend('force', capabilities,
-				require('cmp_nvim_lsp').default_capabilities())
-		})
+		local capabilities = {
+			textDocument = {
+				foldingRange = {
+					dynamicRegistration = false,
+					lineFoldingOnly = true
+				}
+			}
+		}
+
+		capabilities = require('blink.cmp').get_lsp_capabilities(capabilities)
 
 		local map = function(keys, func, desc)
 			vim.keymap.set('n', keys, func, { buffer = event.buf, desc = 'LSP: ' .. desc })
