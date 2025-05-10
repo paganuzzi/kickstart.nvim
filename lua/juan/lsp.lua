@@ -1,1 +1,1 @@
-vim.lsp.enable({ 'lua', 'typescript', 'html', 'phpactor', 'pyright', 'tailwind' })
+vim.lsp.enable({ 'lua', 'typescript', 'html', 'phpactor', 'pyright', 'tailwind', 'angular', 'tailwind' })
