@@ -1,7 +1,7 @@
 vim.api.nvim_create_autocmd('LspAttach', {
 	group = vim.api.nvim_create_augroup('kickstart-lsp-attach', { clear = true }),
 	callback = function(event)
-		local capabilities = {
+		local custom_capabilities = {
 			textDocument = {
 				foldingRange = {
 					dynamicRegistration = false,
@@ -9,7 +9,16 @@ vim.api.nvim_create_autocmd('LspAttach', {
 				}
 			}
 		}
-		capabilities = require('blink.cmp').get_lsp_capabilities(capabilities)
+		require("lazy").load({ plugins = { "blink.cmp" } }) -- Fuerza carga de blink.cmp
+		local client = vim.lsp.get_client_by_id(event.data.client_id)
+		if client then
+			client.capabilities = vim.tbl_deep_extend(
+				"force",
+				client.capabilities,
+				require("blink.cmp").get_lsp_capabilities(),
+				custom_capabilities
+			)
+		end
 
 		local map = function(keys, func, desc)
 			vim.keymap.set('n', keys, func, { buffer = event.buf, desc = 'LSP: ' .. desc })
