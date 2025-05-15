@@ -1,6 +1,6 @@
 return {
   'saghen/blink.cmp',
-  event = { 'BufRead' },
+  event = { 'BufRead', 'InsertEnter', 'CmdlineEnter' },
   dependencies = {
     'rafamadriz/friendly-snippets',
     "folke/lazydev.nvim",

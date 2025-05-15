@@ -1,6 +1,25 @@
 return {
   cmd = { 'lua-language-server' },
   filetypes = { 'lua' },
+  capabilities = require("blink.cmp").get_lsp_capabilities(),
+  settings = {
+    Lua = {
+      runtime = { version = "LuaJIT" }, -- Neovim usa LuaJIT
+      workspace = {
+        checkThirdParty = false,
+        library = {
+          vim.env.VIMRUNTIME,   -- Incluye la API de Neovim
+          "${3rd}/luv/library", -- Soporte para luv
+        },                      -- Evita prompts de terceros
+      },
+      completion = {
+        callSnippet = "Replace",
+      },
+      hint = {
+        enable = true, -- Habilita inlay hints
+      },
+    },
+  },
   root_markers = {
     '.luarc.json',
     '.luarc.jsonc',

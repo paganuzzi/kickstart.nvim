@@ -9,7 +9,6 @@ vim.api.nvim_create_autocmd('LspAttach', {
 				}
 			}
 		}
-
 		capabilities = require('blink.cmp').get_lsp_capabilities(capabilities)
 
 		local map = function(keys, func, desc)
@@ -80,7 +79,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 	desc = 'Highlight when yanking (copying) text',
 	group = vim.api.nvim_create_augroup('kickstart-highlight-yank', { clear = true }),
 	callback = function()
-		vim.highlight.on_yank { timeout = 50 }
+		vim.hl.on_yank { timeout = 50 }
 	end,
 })
 
