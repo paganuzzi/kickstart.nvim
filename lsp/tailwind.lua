@@ -41,7 +41,6 @@ return {
     'mustache',
     'njk',
     'nunjucks',
-    'php',
     'razor',
     'slim',
     'twig',

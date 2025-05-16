@@ -2,14 +2,24 @@ return {
   'saghen/blink.cmp',
   event = { 'BufRead', 'InsertEnter', 'CmdlineEnter' },
   dependencies = {
-    'rafamadriz/friendly-snippets',
     "folke/lazydev.nvim",
+    {
+      'L3MON4D3/LuaSnip',
+      version = 'v2.*',
+      dependencies = {
+        'rafamadriz/friendly-snippets',
+      },
+      config = function()
+        require("luasnip.loaders.from_vscode").lazy_load()
+      end
+    },
   },
   version = '1.*',
 
   ---@module 'blink.cmp'
   ---@type blink.cmp.Config
   opts = {
+    snippets = { preset = 'luasnip' },
     keymap = {
       preset = 'enter',
       ['<C-up>'] = { function(cmp)
@@ -36,7 +46,7 @@ return {
     -- Default list of enabled providers defined so that you can extend it
     -- elsewhere in your config, without redefining it, due to `opts_extend`
     sources = {
-      default = { 'lsp', 'path', 'snippets', 'buffer', 'cmdline', 'omni', 'lazydev' },
+      default = { 'lsp', 'path', 'snippets', 'buffer', 'lazydev' },
       providers = {
         lazydev = {
           name = "LazyDev",
