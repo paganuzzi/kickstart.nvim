@@ -27,7 +27,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
 		-- Jump to the definition of the word under your cursor.
 		--  This is where a variable was first declared, or where a function is defined, etc.
 		--  To jump back, press <C-T>.
-		map('gd', require('telescope.builtin').lsp_definitions, 'Goto Definition')
+		map('gd', vim.lsp.buf.definition, 'Goto Definition')
 
 		-- Find references for the word under your cursor.
 		map('gr', require('telescope.builtin').lsp_references, 'Goto References')

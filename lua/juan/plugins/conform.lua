@@ -14,6 +14,7 @@ return {
         lsp_format = 'fallback',
       },
       formatters_by_ft = {
+        go = { 'gofumpt' },
         lua = { 'stylua' },
         python = { 'black' },
         php = { 'pint' },
