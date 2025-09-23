@@ -1,17 +1,15 @@
 return {
   'adalessa/laravel.nvim',
   dependencies = {
-    'nvim-telescope/telescope.nvim',
-    'tpope/vim-dotenv',
-    'MunifTanjim/nui.nvim',
-    'nvim-treesitter/nvim-treesitter',
-    'kevinhwang91/promise-async',
+    "tpope/vim-dotenv",
+    "MunifTanjim/nui.nvim",
+    "nvim-lua/plenary.nvim",
+    "nvim-neotest/nvim-nio",
   },
   cmd = { 'Laravel' },
   keys = {
-    { '<leader>fa', ':Laravel artisan<cr>', desc = 'Artisan' },
-    { '<leader>fr', ':Laravel routes<cr>', desc = 'Routes' },
-    { '<leader>fm', ':Laravel related<cr>', desc = 'Related' },
+    { "<leader>fa", function() Laravel.pickers.artisan() end, desc = "Laravel: Open Artisan Picker" },
+    { "<leader>fr", function() Laravel.pickers.routes() end,  desc = "Laravel: Open Routes Picker" },
   },
   opts = {
     features = {
@@ -22,11 +20,11 @@ return {
         enable = false,
       },
       route_info = {
-        enable = false, --- to enable the laravel.nvim virtual text
-        position = 'right', --- where to show the info (available options 'right', 'top')
+        enable = false,      --- to enable the laravel.nvim virtual text
+        position = 'right',  --- where to show the info (available options 'right', 'top')
         middlewares = false, --- wheather to show the middlewares section in the info
-        method = false, --- wheather to show the method section in the info
-        uri = false, --- wheather to show the uri section in the info
+        method = false,      --- wheather to show the method section in the info
+        uri = false,         --- wheather to show the uri section in the info
       },
     },
     ui = {
