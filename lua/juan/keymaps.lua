@@ -4,7 +4,8 @@ vim.keymap.set('n', '<leader>ms', '<cmd>Musica next<cr>', { desc = 'Siguiente', 
 vim.keymap.set('n', '<leader>ma', '<cmd>Musica prev<cr>', { desc = 'Anterior', silent = true })
 
 --Terminal
-vim.keymap.set('n', '<tab><tab>', ':split | startinsert | resize 10 | term<cr>', { desc = 'Terminal', silent = true })
+vim.keymap.set('n', '<tab><tab>', ':botright split | startinsert | resize 10 | term<cr>',
+	{ desc = 'Terminal', silent = true })
 vim.keymap.set('n', '<leader>gl', ':startinsert | terminal lazygit<cr>', { desc = 'Lazygit', silent = true })
 
 --Git
