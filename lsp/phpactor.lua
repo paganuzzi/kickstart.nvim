@@ -35,7 +35,7 @@ return {
     ["language_server_phpstan.enabled"] = false,
     ["language_server_phpstan.level"] = "10",
     ["language_server_phpstan.bin"] = "%project_root%/vendor/bin/phpstan",
-    ["language_server_phpstan.mem_limit"] = "2048M",
+    ["language_server_phpstan.mem_limit"] = "3048M",
   },
 }
 -- return {
