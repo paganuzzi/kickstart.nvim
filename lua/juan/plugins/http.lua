@@ -1,18 +1,44 @@
 return {
-  'mistweaverco/kulala.nvim',
-  config = true,
-  -- cmd = { 'HttpRun', 'HttpReplay', 'HttpInspect', 'HttpScratchpad', 'HttpPrevious', 'HttpNext', 'HttpSearch' },
-  opts = {
-    default_view = 'headers_body',
-    split_direction = 'horizontal',
+  "heilgar/nvim-http-client",
+  dependencies = {
+    "nvim-lua/plenary.nvim",
   },
-  keys = {
-    { '<leader>rr', '<cmd>lua require("kulala").run()<cr>', desc = 'Http Run' },
-    { '<leader>ry', '<cmd>lua require("kulala").replay()<cr>', desc = 'Http Replay' },
-    { '<leader>ri', '<cmd>lua require("kulala").inspect()<cr>', desc = 'Http Inspect' },
-    { '<leader>rh', '<cmd>lua require("kulala").scratchpad()<cr>', desc = 'Http Scratch' },
-    { '<leader>rp', '<cmd>lua require("kulala").jump_prev()<cr>', desc = 'Http Prev' },
-    { '<leader>rn', '<cmd>lua require("kulala").jump_next()<cr>', desc = 'Http Next' },
-    { '<leader>rs', '<cmd>lua require("kulala").search()<cr>', desc = 'Http Search' },
-  },
+  ft = { "http", "rest" },
+  config = function()
+    require("http_client").setup({
+      -- Default configuration (works out of the box)
+      default_env_file = '.env.json',
+      request_timeout = 30000,
+      split_direction = "right",
+      create_keybindings = true,
+      user_agent = "heilgar/nvim-http-client",
+
+      -- Profiling (timing metrics for requests)
+      profiling = {
+        enabled = false,
+        show_in_response = true,
+        detailed_metrics = true,
+      },
+
+      -- Default keybindings (can be customized)
+      keybindings = {
+        select_env_file = "<leader>rf",
+        set_env = "<leader>re",
+        run_request = "<leader>rr",
+        stop_request = "<leader>rx",
+        toggle_verbose = "<leader>rv",
+        toggle_profiling = "<leader>rp",
+        dry_run = "<leader>rd",
+        copy_curl = "<leader>rc",
+        save_response = "<leader>rs",
+        set_project_root = "<leader>rg",
+        get_project_root = "<leader>rgg",
+      },
+    })
+
+    -- Set up Telescope integration if available
+    if pcall(require, "telescope") then
+      require("telescope").load_extension("http_client")
+    end
+  end
 }
