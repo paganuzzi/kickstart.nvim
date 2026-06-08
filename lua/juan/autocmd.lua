@@ -156,6 +156,6 @@ vim.api.nvim_create_autocmd('BufWritePost', {
 	pattern = { '*.http' },
 	group = vim.api.nvim_create_augroup('HTTPRequest', { clear = true }),
 	callback = function()
-		vim.cmd 'lua require("kulala").run()'
+		vim.cmd 'HttpRun'
 	end,
 })
