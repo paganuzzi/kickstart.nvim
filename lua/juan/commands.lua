@@ -37,8 +37,3 @@ vim.api.nvim_create_user_command('Musica', function(arg)
     vim.system { 'playerctl', 'previous' }
   end
 end, { nargs = 1 })
-
---Opencode
-vim.api.nvim_create_user_command('OpenCode', function()
-  require("opencode").toggle()
-end, {})

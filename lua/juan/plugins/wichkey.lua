@@ -13,7 +13,6 @@ return {              -- Useful plugin to show you pending keybinds.
       { '<leader>h',        desc = 'Harpoon' },
       { '<leader>l',        desc = 'Lazy' },
       { '<leader>m',        desc = 'Musiquita' },
-      { '<leader>o',        desc = 'OpenCode' },
       { '<leader>r',        desc = 'Api Rest' },
       { '<leader><leader>', desc = 'Search' },
       { '<leader>w',        desc = 'Workspace' },
