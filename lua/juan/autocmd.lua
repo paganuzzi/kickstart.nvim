@@ -156,6 +156,6 @@ vim.api.nvim_create_autocmd('BufWritePost', {
 	pattern = { '*.http' },
 	group = vim.api.nvim_create_augroup('HTTPRequest', { clear = true }),
 	callback = function()
-		vim.cmd 'HttpRun'
+		vim.cmd "HttpRun"
 	end,
 })
