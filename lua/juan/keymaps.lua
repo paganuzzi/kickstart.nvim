@@ -4,6 +4,8 @@ vim.keymap.set('n', '<leader>ms', '<cmd>Musica next<cr>', { desc = 'Siguiente', 
 vim.keymap.set('n', '<leader>ma', '<cmd>Musica prev<cr>', { desc = 'Anterior', silent = true })
 
 --Terminal
+vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
+vim.keymap.set('t', '<C-up>', '<C-\\><C-n><C-w><C-k>', { desc = 'Exit terminal mode' })
 vim.keymap.set('n', '<tab><tab>', ':botright split | startinsert | resize 10 | term<cr>',
 	{ desc = 'Terminal', silent = true })
 vim.keymap.set('n', '<leader>gl', ':startinsert | terminal lazygit<cr>', { desc = 'Lazygit', silent = true })
@@ -18,12 +20,11 @@ vim.keymap.set('n', '<leader>bd', '<cmd>bd<cr>', { desc = 'Borra el buffer actua
 vim.keymap.set('n', '<leader>bp', '<cmd>bp<cr>', { desc = 'Buffer previo' })
 vim.keymap.set('n', '<leader>bo', '<cmd>silent %bd|e#|bd#<cr>', { desc = 'Buffer Otros', silent = true })
 
-vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
-
-vim.keymap.set({ 'n', 't' }, '<C-left>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
-vim.keymap.set({ 'n', 't' }, '<C-right>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
-vim.keymap.set({ 'n', 't' }, '<C-down>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
-vim.keymap.set({ 'n', 't' }, '<C-up>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
+--Movimientos
+vim.keymap.set({ 'n' }, '<C-left>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
+vim.keymap.set({ 'n' }, '<C-right>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
+vim.keymap.set({ 'n' }, '<C-down>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
+vim.keymap.set({ 'n' }, '<C-up>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
 --Telescope
 vim.keymap.set('n', '<C-p>', '<cmd>Telescope git_files<CR>', { desc = '[S]earch [G]it Files' })
