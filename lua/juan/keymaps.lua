@@ -41,6 +41,10 @@ vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 --Save keymaps
 vim.keymap.set({ 'n', 'i', 'v' }, '<C-s>', '<Esc>:silent :w <CR>', { silent = true })
 
+--Query DB DADBOD
+vim.keymap.set('n', '<leader>zq', ':DB <space>', { desc = 'Query' })
+vim.keymap.set('n', '<leader>zs', ':DB select * from <space>', { desc = 'Select' })
+
 -- Diagnostic keymaps
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous [D]iagnostic message' })
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next [D]iagnostic message' })
