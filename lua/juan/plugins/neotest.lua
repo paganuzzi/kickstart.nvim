@@ -3,6 +3,7 @@ return {
   dependencies = {
     'nvim-neotest/nvim-nio',
     'nvim-lua/plenary.nvim',
+    'V13Axel/neotest-pest',
     'antoinemadec/FixCursorHold.nvim',
     'nvim-treesitter/nvim-treesitter',
     'olimorris/neotest-phpunit',
@@ -11,6 +12,7 @@ return {
   config = function()
     require('neotest').setup {
       adapters = {
+        require 'neotest-pest',
         require 'neotest-phpunit',
       },
       status = { virtual_text = true },
@@ -18,6 +20,7 @@ return {
     }
     require 'neotest-phpunit' {
       filter_dirs = { 'vendor' },
+      root_ignore_files = { 'tests/Pest.php' },
     }
   end,
   keys = {
