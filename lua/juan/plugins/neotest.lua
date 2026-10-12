@@ -13,14 +13,17 @@ return {
     require('neotest').setup {
       adapters = {
         require 'neotest-pest',
-        require 'neotest-phpunit',
+        require 'neotest-phpunit' ({
+          filter_dirs = { 'vendor' },
+          root_ignore_files = { 'tests/Pest.php' },
+          root_files = { "composer.json", "phpunit.xml", ".gitignore" },
+          phpunit_cmd = function()
+            return "vendor/bin/phpunit"
+          end
+        }),
       },
       status = { virtual_text = true },
       output = { open_on_run = true },
-    }
-    require 'neotest-phpunit' {
-      filter_dirs = { 'vendor' },
-      root_ignore_files = { 'tests/Pest.php' },
     }
   end,
   keys = {
