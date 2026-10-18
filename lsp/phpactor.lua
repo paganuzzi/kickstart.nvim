@@ -1,8 +1,8 @@
-require('mason')
 return {
   cmd = { 'phpactor', 'language-server' },
   filetypes = { 'php', 'blade' },
   root_dir = function(bufnr, on_dir)
+    require('mason')
     local fname = vim.api.nvim_buf_get_name(bufnr)
     local cwd = assert(vim.uv.cwd())
     local root = vim.fs.root(fname, { 'composer.json', '.git', '.phpactor.json', '.phpactor.yml' })

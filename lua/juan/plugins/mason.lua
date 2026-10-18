@@ -3,7 +3,7 @@ return {
     cmd = { 'Mason', 'MasonInstall', 'MasonUninstall' },
     event = { 'BufRead' },
     config = true,
-    dependencies = {
-        { 'j-hui/fidget.nvim', opts = {} }
-    }
+    -- dependencies = {
+    --     { 'j-hui/fidget.nvim', opts = {} }
+    -- }
 }
