@@ -21,10 +21,15 @@ require('lazy').setup('juan.plugins', {
     -- automatically check for plugin updates
     enabled = true,
     concurrency = nil, ---@type number? set to 1 to check for updates very slowly
-    notify = false, -- get a notification when new updates are found
-    frequency = 3600, -- check for updates every hour
+    notify = false,       -- get a notification when new updates are found
+    frequency = 3600,     -- check for updates every hour
     check_pinned = false, -- check for pinned packages that can't be updated
   },
+  rocks = {
+    hererocks = false,
+    enabled = false
+  },
+
 })
 require 'juan.keymaps'
 require 'juan.lsp'

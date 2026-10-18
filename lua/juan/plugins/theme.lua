@@ -1,6 +1,5 @@
 return {
   'catppuccin/nvim',
-  enabled = true,
   name = 'catppuccin',
   lazy = false,
   priority = 1000,
@@ -21,11 +20,11 @@ return {
         comments = { 'italic' },     -- Change the style of comments
         conditionals = { 'italic' },
       },
+      auto_integrations = false,
       integrations = {
         cmp = true,
         telescope = true,
         gitsigns = true,
-        nvimtree = false,
         treesitter = true,
         notify = true,
         mini = {
