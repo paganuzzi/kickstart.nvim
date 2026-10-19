@@ -114,6 +114,9 @@ vim.api.nvim_create_autocmd('LspAttach', {
 				end,
 			},
 		}
+
+
+		vim.treesitter.start()
 	end,
 })
 

@@ -3,15 +3,15 @@ return {
   build = ':TSUpdate',
   event = 'BufRead',
   config = function()
-    -- [[ Configure Treesitter ]] See `:help nvim-treesitter`
+    local treesitter = require('nvim-treesitter')
 
-    ---@diagnostic disable-next-line: missing-fields
-    require('nvim-treesitter').setup {
-      ensure_installed = { 'bash', 'html', 'lua', 'markdown', 'vim', 'vimdoc', 'php', 'javascript' },
-      -- Autoinstall languages that are not installed
+    treesitter.setup {
+      install_dir = vim.fn.stdpath('config') .. '/parser',
       auto_install = true,
       highlight = { enable = true },
       indent = { enable = true },
     }
+
+    treesitter.install { 'go', 'bash', 'html', 'lua', 'markdown', 'vim', 'vimdoc', 'php', 'javascript' }
   end,
 }

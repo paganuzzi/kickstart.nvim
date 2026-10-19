@@ -20,7 +20,7 @@ return {
         comments = { 'italic' },     -- Change the style of comments
         conditionals = { 'italic' },
       },
-      auto_integrations = false,
+      auto_integrations = true,
       integrations = {
         cmp = true,
         telescope = true,
