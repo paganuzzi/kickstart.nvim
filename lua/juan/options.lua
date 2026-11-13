@@ -11,8 +11,9 @@ vim.opt.undofile = true
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.signcolumn = 'yes'
-vim.opt.shortmess = "aFc"
+vim.opt.shortmess = 'aFc'
 vim.opt.cmdheight = 1
+vim.o.termguicolors = true
 -- Decrease update time
 vim.opt.updatetime = 250
 vim.opt.timeoutlen = 300
