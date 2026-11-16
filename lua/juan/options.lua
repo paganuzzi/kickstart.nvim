@@ -13,6 +13,7 @@ vim.opt.smartcase = true
 vim.opt.signcolumn = 'yes'
 vim.opt.shortmess = 'aFc'
 vim.opt.cmdheight = 1
+vim.o.foldenable = false
 vim.o.termguicolors = true
 -- Decrease update time
 vim.opt.updatetime = 250
