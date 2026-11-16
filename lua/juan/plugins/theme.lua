@@ -10,6 +10,11 @@ return {
         light = 'mocha',
         dark = 'mocha',
       },
+      dim_inactive = {
+        enabled = true,
+        shade = 'dark',
+        percentage = 0.15,
+      },
       transparent_background = true, -- disables setting the background color.
       show_end_of_buffer = false, -- shows the '~' characters after the end of buffers
       term_colors = true, -- sets terminal colors (e.g. `g:terminal_color_0`)

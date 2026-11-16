@@ -1,1 +1,1 @@
-vim.treesitter.start(0, 'http')
+vim.treesitter.start(0, 'yaml')
