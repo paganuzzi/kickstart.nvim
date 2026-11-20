@@ -1,6 +1,14 @@
 vim.api.nvim_create_autocmd('LspAttach', {
   group = vim.api.nvim_create_augroup('kickstart-lsp-attach', { clear = true }),
   callback = function(event)
+    local buf = vim.api.nvim_get_current_buf()
+    local ft = vim.bo[buf].filetype
+
+    -- Skip oil.nvim buffers (and any non-file buffers without a parser)
+    if ft == 'oil' or vim.bo[buf].buftype ~= '' then
+      return
+    end
+
     vim.treesitter.start()
     local custom_capabilities = {
       textDocument = {
